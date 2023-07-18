@@ -1,0 +1,101 @@
+.container{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height:500px;
+    margin: auto;
+    width:500px;
+    gap: 2%;
+    position: relative;
+}
+
+.celda{
+    background-color: bisque;
+    
+}
+
+.X{
+    background-image: url(../img/X.png);
+    background-size: cover;
+    animation: activar 0.5s;
+
+}
+
+.O{
+    background-image: url(../img/O.png);
+    background-size: cover;
+    animation: activar 1s;
+}
+
+@keyframes activar{
+
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+.interfaz{
+    display:flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.score{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+.score h2{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.score__count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.scoreX{
+    color:red;
+}
+
+.scoreO{
+    color:blue;
+}
+
+.modal{
+    width: 600px;
+    height:300px;
+    margin: auto;
+    background-color: rgba(66, 60, 60, 0.79);
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    color: white;
+}
+
+#turnoX{
+    width: 25%;
+    color: red;
+    text-align: center;
+}
+#turnoO{
+    width: 25%;
+    color: blue;
+    text-align: center;
+}
